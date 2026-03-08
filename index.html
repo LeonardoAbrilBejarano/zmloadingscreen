@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Master Loading...</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #111;
+            color: #eee;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            background-image: url('zm_loading_bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* Dark overlay to make text readable */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(20, 20, 25, 0.9);
+            border: 2px solid #550000;
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #ff3333;
+            font-size: 3em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px #000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            color: #ffaa00;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .alert-box {
+            background: rgba(255, 50, 50, 0.15);
+            border-left: 5px solid #ff3333;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .ids-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            text-align: left;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .id-group h3 {
+            color: #aaa;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 5px 0;
+            font-family: monospace;
+            font-size: 1.2em;
+            color: #aaf;
+        }
+        
+        .highlight {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .loading-text {
+            margin-top: 40px;
+            font-size: 1.4em;
+            color: #888;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1>Zombie Master</h1>
+            <h2>Servidor en progreso...</h2>
+            
+            <div class="alert-box">
+                <strong>¿La descarga va muy lenta y no avanza?</strong><br>
+                El motor de Garry's Mod limita la velocidad de descarga cuando entras. Para entrar al instante a máxima velocidad, busca estos IDs en la Workshop de Steam y dale a "Suscribirse":
+            </div>
+
+            <div class="ids-container">
+                <div class="id-group">
+                    <h3>Colección de Armas ARC9:</h3>
+                    <ul>
+                        <li><span class="highlight">2952911209</span> (EFT Pack)</li>
+                        <li><span class="highlight">2910505837</span> (ARC9 Base)</li>
+                        <li><span class="highlight">2917343547</span> (Shared)</li>
+                        <li><span class="highlight">2919110631</span> (Pistolas)</li>
+                        <li><span class="highlight">2917344450</span> (Subfusiles)</li>
+                        <li><span class="highlight">2922999549</span> (Escopetas)</li>
+                        <li><span class="highlight">2962829818</span> (Asalto)</li>
+                    </ul>
+                </div>
+                <div class="id-group">
+                    <h3>Más Armas y Mapas:</h3>
+                    <ul>
+                        <li><span class="highlight">2924902340</span> (Snipers)</li>
+                        <li><span class="highlight">2976665920</span> (Tirador)</li>
+                        <li><span class="highlight">2950907061</span> (Ligeras)</li>
+                        <li><span class="highlight">3010049092</span> (Explosivos)</li>
+                        <li><span class="highlight">3012983285</span> (Melee)</li>
+                        <li><br></li>
+                        <li style="color:#ffaa00"><span class="highlight" style="color:#ffaa00">3681277326</span> (Tus Mapas)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="loading-text">
+                Descargando recursos del servidor... Por favor, espera.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
